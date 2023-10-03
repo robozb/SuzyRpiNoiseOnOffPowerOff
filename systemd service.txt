@@ -1,0 +1,13 @@
+/etc/systemd/system/mouse_listener.service
+-------------------------------------------
+
+[Unit]
+Description=Mouse Listener Service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/robozb/mouse_listener.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
